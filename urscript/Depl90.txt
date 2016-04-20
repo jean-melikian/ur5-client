@@ -1,0 +1,12 @@
+ Programme
+   Programme de robot
+     DéplacementA
+       Point_de_passag_1
+       Attendre: 1.0
+     DéplacementA
+       Point_de_passag_2
+       Point_de_passag_3
+       Point_de_passag_4
+       Point_de_passag_5
+       Point_de_passag_6
+       Point_de_passag_7

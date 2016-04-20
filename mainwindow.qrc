@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/new/icones">
+        <file>res/connection.png</file>
+        <file>res/logout.png</file>
+        <file>res/uricon.png</file>
+    </qresource>
+</RCC>

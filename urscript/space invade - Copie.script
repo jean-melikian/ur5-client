@@ -1,0 +1,21 @@
+def space_invade():
+  set_analog_inputrange(0, 0)
+  set_analog_inputrange(1, 0)
+  set_analog_inputrange(2, 0)
+  set_analog_inputrange(3, 0)
+  set_analog_outputdomain(0, 0)
+  set_analog_outputdomain(1, 0)
+  set_tool_voltage(0)
+  set_runstate_outputs([])
+  set_payload(0.0)
+  set_gravity([0.0, 0.0, 9.82])
+  while (True):
+    $ 1 "Programme de robot"
+    $ 2 "DéplacementA"
+    $ 3 "Point_de_passag_1"
+    movej([-1.2772846985057047, -0.9060353215005833, 1.6476303181502727, -0.9876019623392013, 1.709633560416339, 0.09586718395502883], a=3.141592653589793, v=3.2)
+    $ 4 "Point_de_passag_2"
+    movej([-1.2702620897176597, -0.6837425542816983, 1.6369132188999922, -0.9895778254678864, 1.709633560416339, 0.09586718395502883], a=3.141592653589793, v=3.2)
+    
+  end
+end

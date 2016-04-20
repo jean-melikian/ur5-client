@@ -1,0 +1,24 @@
+def test():
+  set_analog_inputrange(0, 0)
+  set_analog_inputrange(1, 0)
+  set_analog_inputrange(2, 0)
+  set_analog_inputrange(3, 0)
+  set_analog_outputdomain(0, 0)
+  set_analog_outputdomain(1, 0)
+  set_tool_voltage(0)
+  set_runstate_outputs([])
+  set_payload(0.0)
+  set_gravity([0.0, 0.0, 9.82])
+  while (True):
+    $ 1 "Programme de robot"
+    $ 2 "DéplacementA"
+    $ 3 "Point_de_passag_1"
+    movej([0.06079402351093917, -1.3662985166941508, 1.314442372654928, -1.6300414570718207, -1.4038791912130453, -0.5819800388203609], a=25.0, v=3.2)
+    $ 4 "Attendre: 0.5"
+    sleep(0.5)
+    $ 5 "Point_de_passag_2"
+    movej([0.09984404831803063, -1.865508033203696, 1.292124588437371, -1.6300090517276749, -1.4038791912130453, -0.5819800388203609], a=25.0, v=3.2)
+    $ 6 "Point_de_passag_3"
+    movej([0.44524953719656607, -1.9164510046676755, 1.6782179142354634, -1.814666291414479, -1.4182184481394247, -0.5819800388203609], a=25.0, v=3.2)
+  end
+end

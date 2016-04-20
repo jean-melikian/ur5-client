@@ -1,0 +1,10 @@
+ Programme
+   Programme de robot
+     Action
+     DéplacementA
+       Point_de_passag_1
+       Point_de_passag_3
+       Point_de_passag_4
+     Action
+     DéplacementA
+       Point_de_passag_2

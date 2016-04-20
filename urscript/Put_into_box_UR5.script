@@ -1,0 +1,32 @@
+def Put_into_box_UR5():
+  set_analog_inputrange(0, 0)
+  set_analog_inputrange(1, 0)
+  set_analog_inputrange(2, 0)
+  set_analog_inputrange(3, 0)
+  set_analog_outputdomain(0, 0)
+  set_analog_outputdomain(1, 0)
+  set_tool_voltage(0)
+  set_runstate_outputs([])
+  set_payload(0.0)
+  set_gravity([0.0, 0.0, 9.82])
+  $ 1 "Programme de robot"
+  $ 2 "Action"
+  set_payload(0.0)
+  $ 3 "DéplacementA"
+  $ 4 "Home"
+  movej([8.027432885082675E-16, -1.5707963267948966, 4.228388472693467E-18, -1.5707963267948966, -1.5260145577733475E-17, 5.30825383648903E-16], a=1.3962634015954636, v=0.17453292519943295)
+  $ 5 "Waypoint_25"
+  movej([0.3567360000000001, -1.570796326794897, 1.9420229313560355E-15, -1.5707963267948966, -1.5260145577733478E-17, 1.0542781925249045E-15], a=1.3962634015954636, v=0.17453292519943295)
+  $ 6 "Pop-up"
+  popup("Remove first bolt placed under shoulder", title="Message", blocking=True)
+  $ 7 "Waypoint_26"
+  movej([-0.4007999999999972, -1.570796326794897, 1.9420229313560355E-15, -1.5707963267948966, -1.5260145577733478E-17, 1.0542781925249045E-15], a=1.3962634015954636, v=0.17453292519943295)
+  $ 8 "Pop-up"
+  popup("Remove second bolt placed under shoulder                                                                      Place protective pad between arm and base joint", title="Message", blocking=True)
+  $ 9 "Home"
+  movej([8.027432885082675E-16, -1.5707963267948966, 4.228388472693467E-18, -1.5707963267948966, -1.5260145577733475E-17, 5.30825383648903E-16], a=1.3962634015954636, v=0.17453292519943295)
+  $ 10 "Waypoint_23"
+  movej([-9.549541748858914E-4, 0.06286013563701805, -2.8573812056697037, -1.9110596307797767, 8.502088517239646E-4, 4.289273936069635E-4], a=1.3962634015954636, v=0.17453292519943295)
+  $ 11 "Pop-up"
+  popup("Remove remaining bolts", title="Message", blocking=True)
+end

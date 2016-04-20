@@ -1,0 +1,33 @@
+def Depl90():
+  set_analog_inputrange(0, 0)
+  set_analog_inputrange(1, 0)
+  set_analog_inputrange(2, 0)
+  set_analog_inputrange(3, 0)
+  set_analog_outputdomain(0, 0)
+  set_analog_outputdomain(1, 0)
+  set_tool_voltage(0)
+  set_runstate_outputs([])
+  set_payload(0.0)
+  set_gravity([0.0, 0.0, 9.82])
+  while (True):
+    $ 1 "Programme de robot ecrit par D.BOURE"
+    $ 2 "Déplacement de test 90° sur chaque axe"
+    $ 3 "Point_de_passag_1"
+    movej([-0, 0, 0, 0, 0, 0], a=1, v=1)
+    $ 4 "Attendre trois seconde"
+    sleep(3.0)
+    $ 5 "DéplacementA"
+    $ 6 "Point_de_passag_2"
+    movej([1.57, 0, 0, 0, 0, 0], a=1, v=1)
+    $ 7 "Point_de_passag_3"
+    movej([1.57, -1.57, 0, 0, 0, 0], a=1, v=1)
+    $ 8 "Point_de_passag_4"
+    movej([1.57, -1.57, 1.57, 0, 0, 0], a=1, v=1)
+    $ 9 "Point_de_passag_5"
+    movej([1.57, -1.57, 1.57, -1.57, 0, 0], a=1, v=1)
+    $ 10 "Point_de_passag_6"
+    movej([1.57, -1.57, 1.57, -1.57, 1.57, 0], a=1, v=1)
+    $ 11 "Point_de_passag_7"
+    movej([1.57, -1.57, 1.57, -1.57, 1.57, 1.57], a=1, v=1)
+  end
+end
